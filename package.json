@@ -1,5 +1,5 @@
 {
-  "name": "@mastashake08/npm-package-template",
+  "name": "@mastashake08/quic-talk-client",
   "version": "1.0.0-alpha",
   "description": "npm package template.",
   "author": "Jyrone Parker <jyrone.parker@gmail.com>",
@@ -13,13 +13,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mastashake08/npm-package-template"
+    "url": "https://github.com/mastashake08/quic-talk-client"
   },
   "bugs": {
-    "url": "https://github.com/mastashake08/npm-package-template/issues"
+    "url": "https://github.com/mastashake08/quic-talk-client/issues"
   },
   "keywords": [
-    "npm-package-template"
+    "quic-talk-client"
   ],
   "dependencies": {},
   "devDependencies": {
