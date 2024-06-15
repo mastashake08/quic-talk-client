@@ -9,7 +9,7 @@ export class QuicTalk {
     }) {
         this.#peer = new Peer(id);
         this.#transport = new WebTransport(serverUrl);
-        this.#worker = new Worker('workers/main.js');
+        this.#worker = new Worker('./workers/main.js');
 
         this.#worker.postmessage({
             command: 'start',
