@@ -9,9 +9,10 @@ export class QuicTalk {
     }) {
         this.#peer = new Peer(id);
         this.#transport = new WebTransport(serverUrl);
-        this.#worker = SharedWorker('workers/main.js');
-        this.#worker.port.start();
-        this.#worker.port.postmessage({
+        this.#worker = new Worker('workers/main.js');
+        console.log(this.#worker)
+        this.#worker.start();
+        this.#worker.postmessage({
             command: 'start',
             data: {
                 peer: this.#peer,
@@ -19,14 +20,14 @@ export class QuicTalk {
             }
 
         },[this.#peer, this.#transport]);
-        this.#worker.port.onmessage = (e) => {
+        this.#worker.onmessage = (e) => {
             console.log('message');
         }
     }
 
     async call(id) {
         const stream = await navigator.getUserMedia({video: true, audio: true});
-        this.#worker.port.postmessage({
+        this.#worker.postmessage({
             command: 'call',
             data: {
                 id: id,
@@ -36,7 +37,7 @@ export class QuicTalk {
     }
 
     hangup() {
-        this.#worker.port.postmessage({
+        this.#worker.postmessage({
             command: 'hangup',
             data: {}
         });

@@ -1,6 +1,6 @@
 {
   "name": "@mastashake08/quic-talk-client",
-  "version": "1.0.0-alpha",
+  "version": "1.0.1-alpha",
   "description": "A P2P WebRTC calling library that uses WebTransport at the signaling server.",
   "author": "Jyrone Parker <jyrone.parker@gmail.com>",
   "main": "index.js",
