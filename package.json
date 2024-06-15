@@ -1,7 +1,7 @@
 {
   "name": "@mastashake08/quic-talk-client",
   "version": "1.0.0-alpha",
-  "description": "npm package template.",
+  "description": "A P2P WebRTC calling library that uses WebTransport at the signaling server.",
   "author": "Jyrone Parker <jyrone.parker@gmail.com>",
   "main": "index.js",
   "module": "index.js",
@@ -21,7 +21,9 @@
   "keywords": [
     "quic-talk-client"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "peerjs": "1.5.4"
+  },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
@@ -35,6 +37,8 @@
     "prettier": "^2.2.1",
     "standard-version": "^9.0.0"
   },
-  "files": ["src"],
+  "files": [
+    "src"
+  ],
   "license": "MIT"
 }

@@ -1,3 +1,5 @@
-module.exports = function () {
-  return 'quic-talk-client';
-};
+import { QuicTalk } from "./src/QuicTalk";
+
+export {
+  QuicTalk
+}
